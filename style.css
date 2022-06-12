@@ -7,11 +7,74 @@
 }
 
 body{
-   color: black; 
+   color: black;
+   animation: transitionIn 0.85s;
+   animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 img{
     max-width: 100%;
 }
+
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        /* transform: rotateX(-10deg); */
+        transform: translateY(-10px);
+    }
+
+    to{
+        opacity: 1;
+        /* transform: rotateX(0); */
+        transform: translateY(0px);
+    }
+}
+
+
+/*Home*/
+
+
+#img-1{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    /* border: 1px solid red; */
+  
+    /* animation-name: flashing;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-iteration-count: infinite; */
+}
+
+
+@keyframes flashing{
+    0%{
+        opacity: 1.0;
+        background-image: url(./pix/a1\ \(15\).jpeg);
+        
+    }
+    25%{
+        opacity: 0.25;
+        background-image: url(./pix/a1\ \(51\).jpeg);
+
+    }
+
+    50%{
+      opacity: 0.5;
+      background-image: url(./pix/a1\ \(61\).jpeg);
+    }
+  
+    75%{
+    opacity: 0.75;
+    background-image: url(./pix/a1\ \(71\).jpeg);
+    }
+ 
+    100%{
+      opacity: 1;
+      background-image: url(./pix/a1\ \(61\).jpeg);
+
+    }
+}
+
 header{
     width: 100vw;
     width: 100%;
@@ -20,6 +83,7 @@ header{
     background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url(pix/banner.jpeg);
     background-position: center;
     background-size: cover;
+
 }
 
 header .container .nav-container{
@@ -73,7 +137,7 @@ header .container .nav-container .nav-links  li a:hover{
     font-size: 13px;
     background: #b2beb5;
     position: relative;
-    top: 70px;
+    top: 55px;
     transition: all 0.5s;
 
  }
@@ -143,15 +207,19 @@ header .container .nav-container .nav-links  li a:hover{
  .mobile-menu ul{
      line-height: 1.7;
      list-style: none;
+     
  }
  .mobile-menu ul li{
      font-family: 'OpenSans' sans-serif;
      font-size: 1.5rem;
+    transform: translateX(0);
+    
  }
  .mobile-menu ul li a{
      color: black;
      text-transform: capitalize;
      font-weight: 500;
+    
  }
  .mobile-menu ul li a i{
      margin-right: 8px;
@@ -168,18 +236,14 @@ header .container .nav-container .nav-links  li a:hover{
      
    }
 
- #img-1{
-     width:100%;
-     height: 100%;
-     object-fit: cover;
- }
+
 
 
  /**/
  .profile{
     /* border: 1px solid red; */
     font-size: 1.3rem;
-    transition: all 0.5s;
+   
     
  }
  .profile:hover{
@@ -212,7 +276,9 @@ header .container .nav-container .nav-links  li a:hover{
 
 
  /*Profile Page*/
- 
+
+
+
 .Vision-Management{
     width: 80%;
     position:relative;
@@ -331,11 +397,98 @@ header .container .nav-container .nav-links  li a:hover{
 
 }
 
+/*Contact Us*/
+.form{
+    width: 90%;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+.form .input100, .inputSubmit{
+  /* border: 1px solid blue; */
+  width: 100%;
+
+}
+.form input,
+.form textarea{
+  /* border: 1px solid blue; */
+  width: 100%;
+  position: relative;
+  box-shadow:0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.1);;
+  background: transparent;
+  outline: none;
+  font-size: 1.2rem;
+  font-family: 'Oswald' sans-serif;
+  font-weight: 500;
+  padding: 10px 5px;
+  margin: 10px 0;
+  resize: none;
+  border: 1px solid gainsboro;
+
+}
+.form textarea{
+    height: 100px;
+    font-family: 'OpenSans' sans-serif;
+}
+.form  .inputSubmit input{
+    /* border: 1px solid blue; */
+    width: 100%;
+    background-color:#2B166D;
+    cursor: pointer;
+    color: white;
+    font-size: 1.4rem;
+    font-family: 'OpenSans' sans-serif;
+    font-weight: 500;
+    transition: all 0.5s;
+  
+  }
+
+.form  .inputSubmit input:hover{
+    /* border: 1px solid blue; */
+    background-color: #f44336;
+    color: white;
+  
+  }
+
+  #msg{
+    color: f44336;
+    font-size: 2rem;
+    padding: 5px 0;
+
+  }
+
+iframe{
+    border: 1px solid red;
+    width: 90%;
+    max-width: 900px;
+    max-height: 450px;
+    width: 90vw;
+    height: calc(0.5625* 90vw);
+    margin: 5rem auto;
+    display: block;
+  }
+  .my-map{
+    filter: grayscale(100%) invert(100%);
+  }
+/*Scroll bar*/
+::-webkit-scrollbar{
+    width: 5px;
+    height: 2px;
+}
+::-webkit-scrollbar-track{
+  box-shadow:inset 0 0 6px rgba(0, 0, 0, 0.3) ;
+}
+::-webkit-scrollbar-thumb{
+  box-shadow:inset 0 0 6px rgba(0, 0, 0, 0.3) ;
+}
+
 @media only screen and (min-width:370px) and (max-width:600px) {
-    header .hero-content .btn-hero{
-        top: -10px;
-        /* border: 1px solid green; */
+    header{
+        height: 100vh;
     }
+    header .hero-content .btn-hero{
+        top: -5px;
+        /* border: 1px solid green; */
+     } 
     header .container .nav-container .nav-links{
         display: none;
         
@@ -369,6 +522,17 @@ header .container .nav-container .nav-links  li a:hover{
         height: calc(90vh-100px);
         margin: 0;
     }
+
+    #check{
+        /* border: 1px solid red; */
+        margin-top: 40px;
+        font-size: 25px;
+
+    } 
+    #hero-index{
+        /* border: 1px solid red; */
+        top: 35px;
+    }
     
 }
 /*Products*/
@@ -386,7 +550,7 @@ header .container .nav-container .nav-links  li a:hover{
  
 @media only screen and (min-width:600px) and (max-width:1000px) {
     header .hero-content .btn-hero{
-        top: -5px;
+        top: -10px;
         /* border: 1px solid blue; */
         
     }
@@ -405,6 +569,8 @@ header .container .nav-container .nav-links  li a:hover{
         object-fit: cover;
     }
 }
+
+
 @media only screen and (min-width:600px) and (max-width:770px) {
     header .hero-content .btn-hero{
         top: -10px;
