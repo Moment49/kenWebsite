@@ -3,28 +3,29 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 
 }
 
 body{
    color: black;
-   animation: transitionIn 0.85s;
-   animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+     animation: transitionMain 0.55s;
+   animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86); 
 }
 img{
     max-width: 100%;
 }
 
-@keyframes transitionIn{
+@keyframes transitionMain{
     from{
         opacity: 0;
-        /* transform: rotateX(-10deg); */
+       
         transform: translateY(-10px);
     }
 
     to{
         opacity: 1;
-        /* transform: rotateX(0); */
+      
         transform: translateY(0px);
     }
 }
@@ -37,43 +38,10 @@ img{
     width:100%;
     height: 100%;
     object-fit: cover;
-    /* border: 1px solid red; */
-  
-    /* animation-name: flashing;
-    animation-timing-function: linear;
-    animation-duration: 3s;
-    animation-iteration-count: infinite; */
 }
 
 
-@keyframes flashing{
-    0%{
-        opacity: 1.0;
-        background-image: url(./pix/a1\ \(15\).jpeg);
-        
-    }
-    25%{
-        opacity: 0.25;
-        background-image: url(./pix/a1\ \(51\).jpeg);
 
-    }
-
-    50%{
-      opacity: 0.5;
-      background-image: url(./pix/a1\ \(61\).jpeg);
-    }
-  
-    75%{
-    opacity: 0.75;
-    background-image: url(./pix/a1\ \(71\).jpeg);
-    }
- 
-    100%{
-      opacity: 1;
-      background-image: url(./pix/a1\ \(61\).jpeg);
-
-    }
-}
 
 header{
     width: 100vw;
@@ -330,43 +298,13 @@ header .container .nav-container .nav-links  li a:hover{
 }
 
 /*Products*/
-.slider{
-    width: 90%;
-    height: 400px;
-    background: url(Slides/s5.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 20px auto;
-    animation: slide 20s infinite;
-    
+#heor-slider{
+    border: 1px solid red;
+    width: 100%;
+    width: 100vw;
+    height: 75vh;
 }
-@keyframes slide{
-    10%{
-        background: url(Slides/s4.jpg);
-    }
-    20%{
-        background: url(Slides/s3.jpg);
-    }
-    30%{
-        background: url(Slides/s6.jpg);
-    }
-    40%{
-        background: url(Slides/s8.jpg);
-    }
-    50%{
-        background: url(Slides/s9.jpg);
-    }
-     60%{
-        background: url(Slides/s10.jpg);
-    }
-    70%{
-        background: url(Slides/s2.jpg);
-    }
-    80%{
-        background: url(Slides/s1.jpg);
-    }
-}
+
 #product{
     /* border: 1px solid rebeccapurple; */
     margin: 25px 0;
@@ -395,6 +333,35 @@ header .container .nav-container .nav-links  li a:hover{
     color: #fff;
     font-weight: 600;
 
+}
+
+
+.btn:hover{
+    background:white;
+    color: black;
+}
+.card{
+    animation: transitionIn 1.5s;
+    animation-timing-function: cubic-bezier(0.285, 0.135, 0.15, 0.6);
+}
+
+.card:hover{
+    border: 1px solid #2B166D;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: all 0.25s;
+}
+
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        transform: translateX(100%);
+       
+        
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+}
 }
 
 /*Contact Us*/
@@ -586,6 +553,14 @@ iframe{
     }
     .hamburger {
         display: block;
+    }
+}
+
+@media(max-width:578px){
+    #third{
+        border: 1px solid firebrick;
+        display: block;
+        margin: 0 auto;
     }
 }
  
