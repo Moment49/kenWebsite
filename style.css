@@ -244,9 +244,6 @@ header .container .nav-container .nav-links  li a:hover{
 
 
  /*Profile Page*/
-
-
-
 .Vision-Management{
     width: 80%;
     position:relative;
@@ -298,11 +295,11 @@ header .container .nav-container .nav-links  li a:hover{
 }
 
 /*Products*/
-#heor-slider{
-    border: 1px solid red;
+#hero-slider{
+    /* border: 1px solid red; */
     width: 100%;
     width: 100vw;
-    height: 75vh;
+    height: 70vh;
 }
 
 #product{
@@ -349,6 +346,11 @@ header .container .nav-container .nav-links  li a:hover{
     border: 1px solid #2B166D;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     transition: all 0.25s;
+}
+
+#img-1{
+    /* border: 1px solid red; */
+    object-fit: cover;
 }
 
 @keyframes transitionIn{
@@ -488,6 +490,13 @@ iframe{
         width: 100%;
         height: calc(90vh-100px);
         margin: 0;
+        /* border: 1px solid rebeccapurple; */
+    }
+
+    #hero-slider img{
+        width: 100%;
+        height:100vh;
+      
     }
 
     #check{
@@ -558,9 +567,14 @@ iframe{
 
 @media(max-width:578px){
     #third{
-        border: 1px solid firebrick;
+        /* border: 1px solid firebrick; */
         display: block;
-        margin: 0 auto;
+        margin: -5px auto;
+    }
+
+    #third .col{
+        /* border: 1px solid green; */
+        margin: 20px 0;
     }
 }
  
